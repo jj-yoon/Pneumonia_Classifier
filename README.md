@@ -9,7 +9,7 @@ According to the United Nations Children's Fund (UNICEF), more than 800,000 chil
 ## X-Ray Image Classification
 
 ![Image_as_Tensor](images/SAMPLE_IMAGE_TENSOR.PNG)
-<i>Example of Computer Processing</i>
+<br><i>Example of Computer Processing</i>
 
 Machine learning can quickly diagnose pediatric pneumonia with non-invasive x-ray imaging and image classification models. Although the process of training the models are time-consuming, the accuracies of the sophisticated models will help save time when diagnosing patients and performing further research.
 
@@ -18,17 +18,17 @@ Machine learning can quickly diagnose pediatric pneumonia with non-invasive x-ra
 [Data](https://data.mendeley.com/datasets/rscbjbr9sj/3) consists of pediatric x-ray chest images that are presorted into training and testing directories which are each sorted into normal and pneumonia labelled directories. However, in this repo, the images are recombined and resorted in order to create a separate validation directory for model analysis.
 
 ![Normal_Example](images/NORM_EX.jpeg)
-<i>Example of a Normal X-Ray</i>
+<br><i>Example of a Normal X-Ray</i>
 
 ![Pneumonia_Example](images/PNEU_EX.jpeg)
-<i>Example of a Pneumonia X-Ray</i>
+<br><i>Example of a Pneumonia X-Ray</i>
 
 ### The Model
 
 The model is made up of convolutional layers that identify features of the image tensors that run through the filters. The images then pass through the remaining hidden layers before the classification ends.
 
 ![CNN_process](images/CNN_process.PNG)
-<i>Example of the Classification Process (CNN)</i>
+<br><i>Example of the Classification Process (CNN)</i>
 
 The model in its final state has an accuracy rating of 86%, which is reduced at an expense of a 0.59% False Normal (false positive) prediction! It is important to make sure the model doesn't misdiagnose pneumonia patients as normal, because early intervention is key to treating pediatric pneumonia. (The model can easily be reverted back to one with an accuracy rating above 90% for research purposes.)
 
