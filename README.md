@@ -1,6 +1,6 @@
 # Overview
 
-The contents of this repo show the development process of an image classification model with deep learning to identify pediatric patients' chest x-ray images as normal (pneumonia negative) or sick (pneumonia positive). The model utilizes convolutional neural networks achieving accuracy ratings of 95%. The model is also tuned to reduce the amount of false negatives so that no one suffers from the misdiagnosis.
+The contents of this repo show the development of an image classification model with deep learning to identify pediatric patients' chest x-ray images as normal (pneumonia negative) or sick (pneumonia positive). The model utilizes convolutional neural networks achieving accuracy ratings of 95%. The model is also tuned to reduce the amount of false negatives so that no one suffers from the misdiagnosis.
 
 ## Problem
 
@@ -8,27 +8,30 @@ According to the United Nations Children's Fund (UNICEF), more than 800,000 chil
 
 ## X-Ray Image Classification
 
+![Image_as_Tensor](images/SAMPLE_IMAGE_TENSOR.PNG)
+<i>Example of Computer Processing</i>
+
 Machine learning can quickly diagnose pediatric pneumonia with non-invasive x-ray imaging and image classification models. Although the process of training the models are time-consuming, the accuracies of the sophisticated models will help save time when diagnosing patients and performing further research.
 
 ### The Data
 
-[Data](https://data.mendeley.com/datasets/rscbjbr9sj/3) consists of pediatric x-ray chest images that are presorted into normal and pneumonia labelled directories.
+[Data](https://data.mendeley.com/datasets/rscbjbr9sj/3) consists of pediatric x-ray chest images that are presorted into training and testing directories which are each sorted into normal and pneumonia labelled directories. However, in this repo, the images are recombined and resorted in order to create a separate validation directory for model analysis.
 
-[Example of Normal]
+![Normal_Example](images/NORM_EX.jpeg)
+<i>Example of a Normal X-Ray</i>
 
-[Example of Pneumonia]
+![Pneumonia_Example](images/PNEU_EX.jpeg)
+<i>Example of a Pneumonia X-Ray</i>
 
 ### The Model
 
 The model is made up of convolutional layers that identify features of the image tensors that run through the filters. The images then pass through the remaining hidden layers before the classification ends.
-[tensor]
-[process]
-[stats]
+
+![CNN_process](images/CNN_process.PNG)
+<i>Example of the Classification Process (CNN)</i>
+
+The model in its final state has an accuracy rating of 86%, which is reduced at an expense of a 0.59% False Normal (false positive) prediction! It is important to make sure the model doesn't misdiagnose pneumonia patients as normal, because early intervention is key to treating pediatric pneumonia. (The model can easily be reverted back to one with an accuracy rating above 90% for research purposes.)
 
 ## Conclusion
 
-Use X-Ray Imaging with CNN for quick, accurate, and noninvasive diagnosis.
-Future Developments:
-Increase Training Data  Increase Accuracy
-Further Research on Trends
-Build onto Model for Other Applications (COVID)
+Using X-Ray Imaging with CNN for quick, accurate, and noninvasive diagnosis can help diagnose patients as soon as an X-Ray is taken and reduce the fatality rating of global pediatric pneumonia. Building onto the model and increasing the training data overtime will only increase the model's accuracy and help support further research (such as applying to diagnosis of COVID-19 in pediatric patients).
